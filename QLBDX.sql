@@ -1,34 +1,37 @@
-create database QLBDX
 use QLBDX
-create table Nhanxe
+create table Nhanvien 
 (
-idnhanxe char(10) primary key,
-Ngayvao date, 
-Giovao datetime, 
-biensoxe char(10) references Xe(biensoxe),
+idnv char(10) primary key,
+tennv nvarchar(50),
+ngaysinh datetime,
+diachi nvarchar(50),
 )
-create table Ve
+
+create table Loaive 
+(
+idloaive char(10) primary key,
+tenve varchar(45),
+)
+
+create table Xe 
+(
+biensoxe char(10) primary key ,
+tenxe varchar(45),
+idloaive char(10) references Loaive(idloaive),
+giovao datetime,
+ngayvao date,
+giora datetime, 
+ngayra date,
+idnv char(10) references Nhanvien(idnv),
+)
+
+
+
+create table ChitietVe
 (
 idve char(10) primary key,
 tenve varchar(45),
-manhanxe char(10) references Nhanxe(idnhanxe),
 idloaive char(10) references Loaive(idloaive),
+trangthai nvarchar(50),
+biensoxe char(10) references Xe(biensoxe),
 )
-create table Traxe
-(
-idtraxe char(10) primary key,
-Ngayra date,
-Giora datetime,
-idve char(10) references Ve(idve),
-)
-
-create table Xe
-(
-biensoxe char(10) primary key, 
-tenxe varchar(45),
-idloaixe char(10) references Loaixe(idloaixe),
-idtraxe char(10) references Traxe(idtraxe),
-)
-
-
-
