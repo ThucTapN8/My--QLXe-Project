@@ -1,16 +1,5 @@
 create database QLBDX
 use QLBDX
-
-create table Loaixe
-(
-idloaixe char(10) primary key,
-tenloaixe varchar(45),
-)
-create table Loaive 
-(
-idloaive char(10) primary key,
-tenloaive varchar(45),
-)
 create table Nhanxe
 (
 idnhanxe char(10) primary key,
