@@ -20,9 +20,10 @@ tenxe varchar(45),
 idloaive char(10) references Loaive(idloaive),
 giovao datetime,
 ngayvao date,
-giora datetime, 
+giora datetime,
 ngayra date,
 idnv char(10) references Nhanvien(idnv),
+idve char(10) references ChitietVe(idve)
 )
 
 
