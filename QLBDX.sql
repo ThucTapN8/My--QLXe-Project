@@ -2,12 +2,7 @@
 
 
 create database QLBDX
-ON
-	(NAME= QLBDX,filename='Desktop:\Nhom-Sourcecode\Nhom8\QLBDX Project\QuanLyXeOK.mdf ', SIZE=50,MAXSIZE=200,FILEGROWTH=10)
-LOG ON
-	(NAME='QLBDXlog',
-	FILENAME='Desktop:\Nhom-Sourcecode\Nhom8\QLBDX Project\QuanLyXeOK.ldf ', SIZE=10,FILEGROWTH=5)
-go
+GO
 use QLBDX
 go
 --nhân viên
@@ -110,6 +105,8 @@ go
 --chèn nhân viên
 insert into NHANVIEN values('admin2',N'Nguyễn Thùy Linh','Nhân viên thường','1997/05/01',N'Nữ',N'Phú Thọ',0971555654,'admin')
 insert into NHANVIEN values('admin',N'Lê Diệu Hà',N'Nhân viên quản lý','1996/05/20',N'Nam',N'phu tho',0971555654,'admin')
+insert into NHANVIEN values('tuananh',N'Lê Tuấn Anh',N'Nhân viên quản lý','1996/05/02',N'Nam',N'hà nội',0968278583,'admin')
+
 --chèn bãi xe
 insert into BAIXE values('Xe máy','Xe máy',200,200,0)
 insert into BAIXE values('Ô tô','Ô tô',200,200,0)
